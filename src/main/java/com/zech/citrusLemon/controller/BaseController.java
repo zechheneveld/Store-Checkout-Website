@@ -15,6 +15,7 @@ public class BaseController {
 
     @Autowired
     private MathRepository mathRepository;
+    @Autowired
     private InfoRepository infoRepository;
 
     @RequestMapping("/")
@@ -57,9 +58,10 @@ public class BaseController {
         modelMap.put("info", newInfo);
         return "confirm";
     }
-    @RequestMapping("/confirm")
-    public String getName (ModelMap modelMap){
-        modelMap.put("namerepo", infoRepository.getAllEntry());
-        return "confirm";
-    }
+//    @RequestMapping("/log")
+//    public String getName (ModelMap modelMap){
+//        modelMap.put("namerepo", infoRepository.getAllEntry());
+//        return "log";
+//    }
+
 }

@@ -13,7 +13,7 @@
 <body>
 <h1>Confirm</h1>
     <div class="row">
-        <div class="col-md-12" th:each="entry : ${mathrepo}">
+        <div class="col-md-12" th:each="entry : ${entry}">
             <p th:text="'Your Total is: $' + ${entry.solution}" class="solution"></p>
         </div>
     </div>
@@ -23,9 +23,14 @@
 </div>
 <div class="main2">
     <h3>Billing and Shipping Review</h3>
-    <div class="row" th:each="info : ${namerepo}">
-    <p th:text="'Name: '+ ${info.firstName} + ' ' + ${info.lastName}" class="solution"></p>
-</div>
+    <div class="row">
+        <div class="col-md-12" th:each="info : ${info}">
+            <p th:text="'Name: '+ ${info.firstName} + ' ' + ${info.lastName}" class="solution"></p>
+            <p th:text="'Address: ' + ${info.address}" class="solution"></p>
+            <p th:text="${info.city} + ', ' + ${info.state} + ' ' + ${info.zipCode}" class="solution"></p>
+            <p th:text="'Credit Card info: ' + ${info.creditCard} + ' ' + ${info.expiration} + ' ' + ${info.CSV}" class="solution"></p>
+        </div>
+    </div>
 </div>
 </body>
 </html>

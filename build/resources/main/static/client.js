@@ -1,18 +1,18 @@
 var requestArray = [];
 var nameArray = [];
 
-$(document).ready(function () {
-   init();
-});
-
-function init() {
-   // enable();
-}
-function enable() {
-    goHome();
-    goCheckout();
-    goLog();
-}
+// $(document).ready(function () {
+//    init();
+// });
+//
+// function init() {
+//    // enable();
+// }
+// function enable() {
+//     goHome();
+//     goCheckout();
+//     goLog();
+// }
 
 function goLog() {
     window.location.href = "/log"
@@ -63,6 +63,34 @@ function goConfirm() {
     var expiration = $("#expiration").val();
     var CSV = $("#CSV").val();
 
+    if(firstName == '') {
+        firstName = null;
+    }
+    if(lastName == '') {
+        lastName = null;
+    }
+    if(address == '') {
+        address = null;
+    }
+    if(city == '') {
+        city = null;
+    }
+    if(state == '') {
+        state = null;
+    }
+    if(zipCode == '') {
+        zipCode = null;
+    }
+    if(creditCard == '') {
+        creditCard = null;
+    }
+    if(expiration == '') {
+        expiration = null;
+    }
+    if(CSV == '') {
+        CSV = null;
+    }
+
     var newCustomer = {};
     newCustomer.fname = firstName;
     newCustomer.lname = lastName;
@@ -76,7 +104,6 @@ function goConfirm() {
 
 
     nameArray.push(newCustomer);
-    console.log(nameArray);
     window.location.href = "/name/" + firstName + "/" + lastName + "/" + address + "/" + city + "/" + state + "/" + zipCode + "/" + creditCard + "/" + expiration + "/" + CSV;
-
 }
+
