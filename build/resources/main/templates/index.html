@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+
+
+    <script type="text/javascript" th:src="@{/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/client.js}"></script>
+</head>
+<body>
+<h1 align="center">Sour Suzy Lemonade!</h1>
+<p align="center">When life gave Suzy Lemons, she had a party and made Lemonade Shots!</p>
+<div class="row">
+    <button onclick="goLog()" class="btn btn-info">Order History</button>
+</div>
+<div class="container" align="center">
+<div id="StrawLemon" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://www.wowamazing.com/wp-content/uploads/2015/08/WOW-Amazing-FI-Edible-Shots.jpg" alt="Card image cap"/>
+    <div class="card-body">
+        <p class="card-text">Take Sour, Take Sweet and then make it Sensational!</p>
+        <p class="card-text">Strawberry Lemonade 5 pieces $3.00</p>
+        <input id="strawberry" placeholder="Enter Quantity"/>
+    </div>
+</div>
+</div>
+<div class="container" align="center">
+<div id="regLemon" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnRb885HIHBocYmZqs7VW_FH85MmPw3YGXmcKECAShe2-1CV5Vg" alt="Card image cap"/>
+    <div class="card-body">
+        <p class="card-text">Regular Lemonade 5 pieces $2.00</p>
+        <input id="regular" placeholder="Enter Quantity"/>
+    </div>
+</div>
+</div>
+        <div class="Continue" align="right">
+            <button onclick="goCheckout()" class="btn btn-info">Continue</button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Confirmation</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+
+
+    <script type="text/javascript" th:src="@{/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/client.js}"></script>
+</head>
+<body>
+<h1>Confirm</h1>
+    <div class="row">
+        <div class="col-md-12" th:each="entry : ${mathrepo}">
+            <p th:text="'Your Total is: $' + ${entry.solution}" class="solution"></p>
+        </div>
+    </div>
+<div class="nav" align="center">
+    <h2>Thank You For Your Purchase</h2>
+    <h3>Your Order Has Been Received</h3>
+</div>
+<div class="main2">
+    <h3>Billing and Shipping Review</h3>
+    <div class="row" th:each="info : ${namerepo}">
+    <p th:text="'Name: '+ ${info.firstName} + ' ' + ${info.lastName}" class="solution"></p>
+</div>
+</div>
+</body>
+</html>
