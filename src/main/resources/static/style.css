@@ -12,18 +12,33 @@ p {
 }
 
 .container{
-    background-color: lightgray;
+    background-color: pink;
     max-width: 100%;
     min-width: 140px;
     flex: 1;
-    border: 2px solid grey;
+    border: 2px purple;
 }
 .checkout {
     width: 600px;
     margin: 0 auto;
     max-height: 800px;
     max-width: 800px;
-    padding-left: 200px;
+    padding-left: 120px;
     border: 2px solid black;
-    background-color: rgba(190, 190, 190, 0.29);
+    background-color: greenyellow;
+}
+.confirm {
+    width: 500px;
+    margin: 0 auto;
+    max-height: 900px;
+    max-width: 900px;
+    padding-left: 120px;
+    border: 2px solid black;
+    background-color: greenyellow;
+}
+body {
+    background-color: #ffe8a1;
+}
+.btn {
+    alignment: right;
 }

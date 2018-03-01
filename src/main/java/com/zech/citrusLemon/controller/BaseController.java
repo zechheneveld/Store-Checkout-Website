@@ -55,6 +55,7 @@ public class BaseController {
             ){
         InfoEntry newInfo = new InfoEntry (firstName, lastName, address, city, state, zipCode, creditCard, expiration, CSV);
         infoRepository.addEntry(newInfo);
+        modelMap.put("whatever", mathRepository.getLastEntry());
         modelMap.put("info", newInfo);
         return "confirm";
     }
@@ -63,5 +64,4 @@ public class BaseController {
 //        modelMap.put("namerepo", infoRepository.getAllEntry());
 //        return "log";
 //    }
-
 }

@@ -11,17 +11,12 @@
     <script type="text/javascript" th:src="@{/client.js}"></script>
 </head>
 <body>
-<h1>Confirm</h1>
-    <div class="row">
-        <div class="col-md-12" th:each="entry : ${entry}">
-            <p th:text="'Your Total is: $' + ${entry.solution}" class="solution"></p>
-        </div>
-    </div>
-<div class="nav" align="center">
+<div class="row" align="center">
+    <h1>Confirm</h1>
     <h2>Thank You For Your Purchase</h2>
     <h3>Your Order Has Been Received</h3>
 </div>
-<div class="main2">
+<div class="confirm">
     <h3>Billing and Shipping Review</h3>
     <div class="row">
         <div class="col-md-12" th:each="info : ${info}">
@@ -29,6 +24,12 @@
             <p th:text="'Address: ' + ${info.address}" class="solution"></p>
             <p th:text="${info.city} + ', ' + ${info.state} + ' ' + ${info.zipCode}" class="solution"></p>
             <p th:text="'Credit Card info: ' + ${info.creditCard} + ' ' + ${info.expiration} + ' ' + ${info.CSV}" class="solution"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p></p>
+            <p th:text="'Your Total is: $' + ${whatever.solution}" class="solution"></p>
         </div>
     </div>
 </div>

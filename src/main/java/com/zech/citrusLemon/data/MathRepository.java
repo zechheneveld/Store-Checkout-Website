@@ -16,4 +16,8 @@ public class MathRepository {
     public void addEntry(MathEntry mathEntry){
         allEntries.add(mathEntry);
     }
+    public MathEntry getLastEntry(){
+        MathEntry last = this.allEntries.get(this.allEntries.size() - 1);
+        return last;
+    }
 }

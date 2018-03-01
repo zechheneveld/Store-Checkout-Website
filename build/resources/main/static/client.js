@@ -1,19 +1,6 @@
 var requestArray = [];
 var nameArray = [];
 
-// $(document).ready(function () {
-//    init();
-// });
-//
-// function init() {
-//    // enable();
-// }
-// function enable() {
-//     goHome();
-//     goCheckout();
-//     goLog();
-// }
-
 function goLog() {
     window.location.href = "/log"
 }
