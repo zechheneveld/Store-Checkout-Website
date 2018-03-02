@@ -4,10 +4,15 @@ var nameArray = [];
 function goLog() {
     window.location.href = "/log"
 }
+function goSummary() {
+    window.location.href = "/summary"
+
+}
 
 function goCheckout() {
     var regular = $("#regular").val();
     var strawberry = $("#strawberry").val();
+    var waterMelon = $("#waterMelon").val();
 
     if(regular == '') {
         regular = 0;
@@ -15,13 +20,19 @@ function goCheckout() {
     if (strawberry == '') {
         strawberry = 0;
     }
+    if(waterMelon == '') {
+        waterMelon = 0;
+    }
 
     regQty = (parseFloat(regular));
     strQty = (parseFloat(strawberry));
+    watQty = (parseFloat(waterMelon));
+
 
     var newNumber = {};
     newNumber.Rlemon = regQty;
     newNumber.STlemon = strQty;
+    newNumber.WTlemon = watQty;
 
     requestArray.push(newNumber);
 
@@ -36,7 +47,7 @@ function goHome() {
 
 function sendToServer() {
 
-    window.location.href = "/math/" + regQty + "/" + strQty;
+    window.location.href = "/math/" + regQty + "/" + strQty + "/" + watQty;
 
 }
 function goConfirm() {

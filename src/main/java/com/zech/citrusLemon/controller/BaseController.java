@@ -23,14 +23,15 @@ public class BaseController {
         return "index";
     }
 
-    @RequestMapping("/math/{regQty}/{strQty}")
+    @RequestMapping("/math/{regQty}/{strQty}/{watQty}")
     public String doMath(
             @PathVariable String regQty,
             @PathVariable String strQty,
+            @PathVariable String watQty,
             ModelMap modelMap
             ){
 
-        MathEntry newEntry = new MathEntry(regQty, strQty);
+        MathEntry newEntry = new MathEntry(regQty, strQty, watQty);
         mathRepository.addEntry(newEntry);
         modelMap.put("entry", newEntry);
         return "checkout";

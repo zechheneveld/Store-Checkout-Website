@@ -16,28 +16,37 @@
 <div class="row">
     <button onclick="goLog()" class="btn btn-info">Order History</button>
 </div>
-<div class="container" align="center">
-<div id="StrawLemon" class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://www.wowamazing.com/wp-content/uploads/2015/08/WOW-Amazing-FI-Edible-Shots.jpg" alt="Card image cap"/>
-    <div class="card-body">
-        <p class="card-text">Take Sour, Take Sweet and then make it Sensational!</p>
-        <p class="card-text">Strawberry Lemonade 5 pieces $3.00</p>
-        <input id="strawberry" placeholder="Enter Quantity"/>
-    </div>
-</div>
-    <div id="regLemon" class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnRb885HIHBocYmZqs7VW_FH85MmPw3YGXmcKECAShe2-1CV5Vg" alt="Card image cap"/>
-        <div class="card-body">
-            <p class="card-text">Regular Lemonade 5 pieces $2.00</p>
-            <input id="regular" placeholder="Enter Quantity"/>
+<div class="container">
+    <div class="row">
+        <div id="StrawLemon" class="col-md-4 bold card" style="background:#ff6a7a;">
+            <img class="card-img-top" src="https://www.wowamazing.com/wp-content/uploads/2015/08/WOW-Amazing-FI-Edible-Shots.jpg" alt="Card image cap"/>
+            <div class="card-body">
+                <p class="card-text">Take Sour, Take Sweet and then make it Sensational!</p>
+                <p class="card-text">Strawberry Lemonade 5 pieces $3.00</p>
+                <input id="strawberry" placeholder="Enter Quantity"/>
+            </div>
+        </div>
+        <div id="regLemon" class="col-md-4 bold card" style="background: #fffa4b">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnRb885HIHBocYmZqs7VW_FH85MmPw3YGXmcKECAShe2-1CV5Vg" alt="Card image cap"/>
+            <div class="card-body">
+                <p class="card-text">Nothing wrong with being Regular</p>
+                <p class="card-text">Regular Lemonade 5 pieces $2.00</p>
+                <input id="regular" placeholder="Enter Quantity"/>
+            </div>
+        </div>
+        <div id="waterLemon" class="col-md-4 bold card" style="background: #9ed123;">
+            <img class="card-img-top" src="http://www.thatssomichelle.com/wp-content/uploads/2011/02/IMG_2371.jpg" alt="Card image cap"/>
+            <div class="card-body">
+                <p class="card-text">Make your day more exciting with this Summer refreshing watermelon jello shot</p>
+                <p class="card-text">Watermelon Lemonade 3 pieces $5.00</p>
+                <input id="waterMelon" placeholder="Enter Quantity"/>
+            </div>
         </div>
     </div>
 </div>
-<div class="container" align="center">
 
-</div>
         <div class="Continue" align="right">
-            <button onclick="goCheckout()" class="btn btn-info">Continue</button>
+            <button onclick="goCheckout()" class="btn btn-success">Continue</button>
         </div>
 </body>
 </html>

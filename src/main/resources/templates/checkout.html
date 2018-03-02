@@ -11,13 +11,17 @@
     <script type="text/javascript" th:src="@{/client.js}"></script>
 </head>
 <body>
-<h1>Checkout Page</h1>
+<h1 align="center">Checkout Page</h1>
+<div class="row">
+    <button onclick="goLog()" class="btn btn-info">Order History</button>
+</div>
     <div class="row">
         <div class="col-md-12">
             <p th:text="'Your Total is: $' + ${entry.solution}" class="solution"></p>
         </div>
     </div>
 <div class="checkout">
+    <p></p>
     <form>
         <input type="text" id="firstName" placeholder="Enter First Name"/>
         <input type="text" id="lastName" placeholder="Enter Last Name"/>
@@ -39,10 +43,11 @@
         <input type="text" id="expiration" placeholder="Enter Expiration"/>
         <input type="text" id="CSV" placeholder="Enter CSV"/>
     </form>
+    <p></p>
 </div>
     <div class="nav">
-     <button onclick="goHome()" class="btn btn-info">Return Shopping</button>
-        <button onclick="goConfirm()" class="btn btn-info">Confirm</button>
+     <button onclick="goHome()" class="btn btn-success">Return Shopping</button>
+        <button id="checkoutBtn" onclick="goConfirm()" class="btn btn-success">Checkout</button>
     </div>
 </body>
 </html>

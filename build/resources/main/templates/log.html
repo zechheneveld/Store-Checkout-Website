@@ -16,12 +16,13 @@
 <body>
     <div id="thelog" class="container">
         <div class="row">
-            <button onclick="goHome()" class="btn btn-info">Return Shopping</button>
+            <button onclick="goHome()" class="btn btn-success">Return Shopping</button>
         </div>
         <div class="row" th:each="entry : ${mathrepo}">
             <div class="col-md-12">
                 <p th:text="'Regular: ' + ${entry.regQty}" class="solution"></p>
                 <p th:text="'Strawberry: ' + ${entry.strQty}" class="solution"></p>
+                <p th:text="'Watermelon: ' + ${entry.watQty}" class="solution"></p>
                 <p th:text="'Total Price: $' + ${entry.solution}" class="solution"></p>
                 <p th:text="'.................'" class="solution"></p>
 

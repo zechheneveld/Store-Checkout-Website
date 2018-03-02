@@ -11,14 +11,12 @@
     <script type="text/javascript" th:src="@{/client.js}"></script>
 </head>
 <body>
-<div class="row" align="center">
-    <h1>Confirm</h1>
-    <h2>Thank You For Your Purchase</h2>
-    <h3>Your Order Has Been Received</h3>
+<div class="row">
+    <button onclick="goLog()" class="btn btn-info">Order History</button>
 </div>
 <div class="confirm">
-    <h3>Billing and Shipping Review</h3>
     <div class="row">
+        <h3>Billing and Shipping Review</h3>
         <div class="col-md-12" th:each="info : ${info}">
             <p th:text="'Name: '+ ${info.firstName} + ' ' + ${info.lastName}" class="solution"></p>
             <p th:text="'Address: ' + ${info.address}" class="solution"></p>
@@ -32,6 +30,10 @@
             <p th:text="'Your Total is: $' + ${whatever.solution}" class="solution"></p>
         </div>
     </div>
+</div>
+<div class="nav">
+    <button onclick="goHome()" class="btn btn-success">Return Shopping</button>
+    <button id="checkoutBtn" onclick="goSummary()" class="btn btn-success">Confirm</button>
 </div>
 </body>
 </html>
